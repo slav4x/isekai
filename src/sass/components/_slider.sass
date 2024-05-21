@@ -1,0 +1,105 @@
+.slider
+  padding: 100px 0
+  min-height: 100vh
+  background: url(../img/slider-bg.jpg) no-repeat center / cover
+  color: #fff
+  @include flexbox
+  &-item
+    max-width: 770px
+    width: 100%
+    padding: 60px 50px
+    border-radius: var(--radius)
+    background: rgba(0, 0, 0, 0.45)
+    backdrop-filter: blur(30px)
+    border: 1px solid rgba(255,255,255,.3)
+    position: relative
+    // overflow: hidden
+    font-size: 18px
+    color: #dedede
+    line-height: 1.5
+    letter-spacing: 0.02em
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: url(../img/noise.png)
+      opacity: 0.35
+      z-index: -1
+      border-radius: var(--radius)
+    h3
+      text-align: center
+      text-transform: uppercase
+      font-family: 'M PLUS Rounded 1c'
+      font-size: 48px
+      line-height: 1.3
+      font-weight: 700
+      background: -webkit-linear-gradient(0deg, #50C8C3, #C841E1)
+      -webkit-background-clip: text
+      -webkit-text-stroke: 4px transparent
+      color: #fff
+      margin-bottom: 15px
+    ul
+      list-style: disc
+      padding-left: 17px
+      margin-top: 15px
+    p
+      margin-top: 15px
+  .splide__slide
+    @include flexbox
+    align-items: center
+    justify-content: center
+    padding: 0 10px
+  .splide__track,
+  .splide__list,
+  .splide__slide
+    width: 100%
+  .splide__arrows
+    position: absolute
+    bottom: 60px
+    left: 0
+    right: 0
+    margin: 0 auto
+    width: 126px
+    height: 68px
+    background: rgba(0, 0, 0, 0.55)
+    backdrop-filter: blur(3px)
+    border-radius: 99px
+  .splide__arrow
+    width: 48px
+    height: 48px
+    opacity: 1
+    background: linear-gradient(108deg, #50C8C3 -0.98%, #C841E1 120.03%), #FFFFFF
+    transition: .2s
+    overflow: hidden
+    &--prev
+      left: 10px
+    &--next
+      right: 10px
+    svg
+      stroke-width: 4px
+      stroke: #fff
+      stroke-linecap: round
+      stroke-linejoin: round
+      position: relative
+      z-index: 10
+      transition: .2s
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: #fff
+      opacity: 0
+      transition: .2s
+    &[disabled]
+      &::before
+        opacity: 1
+      svg
+        stroke: #43464E
+    &:hover
+      opacity: 1
