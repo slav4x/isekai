@@ -22,4 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   slider.mount();
+
+  const gallery = new Splide('.gallery-slider', {
+    arrows: false,
+    type: 'loop',
+    pagination: false,
+  });
+
+  gallery.mount();
 });
