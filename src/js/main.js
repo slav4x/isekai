@@ -49,6 +49,11 @@ document.addEventListener('DOMContentLoaded', function () {
       pauseOnHover: false,
       pauseOnFocus: false,
     },
+    breakpoints: {
+      768: {
+        gap: 50,
+      },
+    },
   }).mount(window.splide.Extensions);
 
   new Splide('.partners-small', {
@@ -62,6 +67,11 @@ document.addEventListener('DOMContentLoaded', function () {
       speed: -0.2,
       pauseOnHover: false,
       pauseOnFocus: false,
+    },
+    breakpoints: {
+      768: {
+        gap: 50,
+      },
     },
   }).mount(window.splide.Extensions);
 
