@@ -36,4 +36,32 @@ document.addEventListener('DOMContentLoaded', function () {
     pagination: !1,
     arrowPath: 'M5 19.9993L35 19.9994M35 19.9994L20.8333 34.166M35 19.9994L20.8333 5.83268',
   }).mount();
+
+  new Splide('.partners-big', {
+    type: 'loop',
+    autoWidth: true,
+    focus: 'center',
+    pagination: false,
+    arrows: false,
+    gap: 90,
+    autoScroll: {
+      speed: 0.2,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+    },
+  }).mount(window.splide.Extensions);
+
+  new Splide('.partners-small', {
+    type: 'loop',
+    autoWidth: true,
+    focus: 'center',
+    pagination: false,
+    arrows: false,
+    gap: 90,
+    autoScroll: {
+      speed: -0.2,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+    },
+  }).mount(window.splide.Extensions);
 });

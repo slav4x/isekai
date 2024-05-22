@@ -75,7 +75,7 @@ const js = () => {
 };
 
 const libs_js = () => {
-  return src(['src/js/vendor/splide.min.js', 'src/js/vendor/fancybox.min.js'])
+  return src(['src/js/vendor/splide.min.js', 'src/js/vendor/splide-extension-auto-scroll.min.js', 'src/js/vendor/fancybox.min.js'])
     .pipe(isMinify ? uglify() : noop())
     .pipe(isMinify ? concat('libs.min.js') : concat('libs.js'))
     .pipe(dest('app/js/'));
