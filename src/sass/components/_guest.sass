@@ -58,7 +58,7 @@
         right: 10px
       svg
         stroke-width: 4px
-        stroke: #fff
+        stroke: #43464E
         stroke-linecap: round
         stroke-linejoin: round
         position: relative
@@ -72,15 +72,14 @@
         right: 0
         bottom: 0
         background: #fff
-        opacity: 0
+        opacity: 1
         transition: .2s
-      &[disabled]
-        &::before
-          opacity: 1
-        svg
-          stroke: #43464E
       &:hover
         opacity: 1
+        &::before
+          opacity: 0
+        svg
+          stroke: #fff
   &-item
     width: 310px
     position: relative
