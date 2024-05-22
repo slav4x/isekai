@@ -1,0 +1,26 @@
+.footer
+  padding: 80px 0
+  .container
+    @include flexbox
+    align-items: center
+    justify-content: space-between
+  &-info
+    @include flexbox
+    align-items: center
+    gap: 25px
+    width: 280px
+  &-info__text
+    font-size: 12px
+    line-height: 1.4
+    a
+      border-bottom: 1px solid rgba(51,51,51,.3)
+  &-social
+    width: 280px
+    @include flexbox
+    align-items: center
+    justify-content: flex-end
+    gap: 10px
+  &-partners
+    @include flexbox
+    align-items: center
+    gap: 15px
