@@ -3,16 +3,19 @@
   padding: 160px 0
   .title
     text-align: center
-  &-iframe
+  &-video
     width: 970px
     margin: 40px auto 0
     border-radius: var(--radius)
     overflow: hidden
-    padding-bottom: 56.25%
-    position: relative
-    iframe
+    display: block
+    &::after
+      content: ''
       position: absolute
       top: 0
       left: 0
-      width: 100% !important
-      height: 100% !important
+      right: 0
+      bottom: 0
+      background: #000
+      opacity: 0.5
+      z-index: 1
