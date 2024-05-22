@@ -64,4 +64,11 @@ document.addEventListener('DOMContentLoaded', function () {
       pauseOnFocus: false,
     },
   }).mount(window.splide.Extensions);
+
+  const burger = document.querySelector('.header-burger');
+  const header = document.querySelector('.header');
+
+  burger.addEventListener('click', () => {
+    header.classList.toggle('open');
+  });
 });

@@ -1,3 +1,48 @@
 @media(max-width: 1023px)
   .container
     max-width: 768px
+
+  .header-btn,
+  .header-nav
+    display: none
+
+  .header-burger
+    width: 24px
+    height: 24px
+    @include flexbox
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    gap: 5px
+    cursor: pointer
+    span
+      display: block
+      width: 20px
+      height: 2px
+      background: #fff
+      border-radius: 2px
+
+  .header.open .header-burger
+    span:nth-child(1)
+      transform: rotate(45deg) translate(5px, 5px)
+    span:nth-child(2)
+      opacity: 0
+    span:nth-child(3)
+      transform: rotate(-45deg) translate(5px, -5px)
+
+  .header.open .header-nav
+    display: flex
+    width: 100%
+    flex-direction: column
+    font-size: 18px
+    gap: 40px
+    margin-top: 40px
+    span
+      display: block
+
+  .header.open .header-btn
+    display: block
+    width: 100%
+    margin-top: 40px
+    text-align: center
+    margin-bottom: 20px
