@@ -10,7 +10,7 @@
       <img src="img/logo-color.png" alt="" class="hero-logo">
       <h3 class="hero-place">Центр кино “Мосфильм”<br> 10 - 11 августа 2024</h3>
       <p class="hero-text">Фестиваль азиатской поп-культуры Isekai Fest в третий раз соберëт вместе всех поклонников манги, аниме, ранобэ, дунхуа и дорам на площадке киноконцертного комплекса «Мосфильм». В прошлом году мероприятие посетило более 5000 человек — пора ставить новые рекорды!</p>
-      <a href="#" class="hero-btn"><p>Купить билеты</p></a>
+      <a href="#tickets" class="hero-btn"><p>Купить билеты</p></a>
       <img src="img/hero-maskot.png" alt="" class="hero-maskot">
     </div>
   </div>
@@ -277,5 +277,82 @@
     </div>
   </div>
 </section>
+
+<section class="tickets" id="tickets">
+  <div class="container">
+    <h2 class="title">КАТЕГОРИИ БИЛЕТОВ</h2>
+    <div class="tickets-grid">
+      <div class="tickets-item">
+        <div class="tickets-head">
+          <span>Стандарт</span>
+          <b>Сб 10.08</b>
+          <h3>1500 <small>Руб.</small></h3>
+        </div>
+        <ul class="tickets-list">
+          <li>Входной билет действует на один из дней фестиваля</li>
+          <li>Доступ на весь день. С 12:00 - 20:00, вход до 19:00</li>
+          <li>Вход/выход разрешен</li>
+        </ul>
+        <button onclick="window.TLIframe.showPopup({url: 'https://ticketland.ru/drugoe/kinokoncern-mosfilm/isekai-fest-2024/20240810_1200-5291860'});" class="tickets-btn">Купить билет</button>
+      </div>
+      <div class="tickets-item">
+        <div class="tickets-head">
+          <span>Стандарт</span>
+          <b>Вск 11.08</b>
+          <h3>1500 <small>Руб.</small></h3>
+        </div>
+        <ul class="tickets-list">
+          <li>Входной билет действует на один из дней фестиваля</li>
+          <li>Доступ на весь день. С 12:00 - 20:00, вход до 19:00</li>
+          <li>Вход/выход разрешен</li>
+        </ul>
+        <button onclick="window.TLIframe.showPopup({url: 'https://ticketland.ru/drugoe/kinokoncern-mosfilm/isekai-fest-2024/20240811_1200-5291860'});" class="tickets-btn">Купить билет</button>
+      </div>
+      <div class="tickets-item vip">
+        <div class="tickets-head">
+          <span>VIP</span>
+          <b>Все дни</b>
+          <h3>7000 <small>Руб.</small></h3>
+        </div>
+        <ul class="tickets-list">
+          <li>Проход на мероприятия с ранним доступом с 11:00 - 20:00, вход до 19:00</li>
+          <li>Отдельный вход для VIP-посетителей, позволяющий пройти на территорию выставки в любое время работы фестиваля</li>
+          <li>Бэйдж VIP-посетителя</li>
+          <li>Доступ в VIP-зону</li>
+          <li>Комплект VIP-участника с символикой фестиваля, включающий эксклюзивные сувениры от организаторов</li>
+          <li>Автограф/фото сессия с гостями фестиваля</li>
+        </ul>
+        <button onclick="window.TLIframe.showPopup({url: 'https://ticketland.ru/drugoe/kinokoncern-mosfilm/isekai-fest-2024/20240810_1100-5291859'});" class="tickets-btn">Купить билет</button>
+      </div>
+      <div class="tickets-item super-vip">
+        <div class="tickets-head">
+          <span>Super VIP</span>
+          <b>Все дни</b>
+          <h3>15000 <small>Руб.</small></h3>
+          <img src="img/hero-maskot.png" alt="">
+        </div>
+        <ul class="tickets-list">
+          <li>Билет дает доступ на все дни. </li>
+          <li>Проход на мероприятия с ранним доступом с 11:00 - 20:00, вход до 19:00;</li>
+          <li>Отдельный вход для VIP-посетителей, позволяющий пройти на территорию выставки в любое время работы фестиваля;</li>
+          <li>Персональный именной бэйдж VIP-посетителя;</li>
+          <li>Доступ в VIP-зону с эксклюзивными лекциями и встречами</li>
+          <li>Специальные места на показах в кинотеатре фестиваля</li>
+          <li>Автограф/фото сессия с гостями фестиваля с приоритетным доступом</li>
+          <li>Комплект Super VIP-участника с символикой выставки, включающий эксклюзивные сувениры от организаторов выставки</li>
+        </ul>
+        <button onclick="window.TLIframe.showPopup({url: 'https://ticketland.ru/drugoe/kinokoncern-mosfilm/isekai-fest-2024/20240810_1100-5291861'});" class="tickets-btn">Купить билет</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  var TLConf = {
+    accessHash: "5f83a5ff50840b6515f3a02d707b2f37",
+    version: 1,
+  };
+</script>
+<script async src="https://www.ticketland.ru/iframe/loaderJs/"></script>
 
 {% endblock %}
