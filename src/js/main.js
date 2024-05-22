@@ -75,10 +75,26 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   }).mount(window.splide.Extensions);
 
-  const burger = document.querySelector('.header-burger');
+  const body = document.querySelector('body');
   const header = document.querySelector('.header');
+  const headerNavItems = header.querySelectorAll('.header-nav li');
+  const headerBurger = header.querySelector('.header-burger');
+  const headerBtn = header.querySelector('.header-btn');
 
-  burger.addEventListener('click', () => {
+  headerBurger.addEventListener('click', () => {
+    body.classList.toggle('overflow');
     header.classList.toggle('open');
+  });
+
+  headerBtn.addEventListener('click', () => {
+    body.classList.remove('overflow');
+    header.classList.remove('open');
+  });
+
+  headerNavItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      body.classList.remove('overflow');
+      header.classList.remove('open');
+    });
   });
 });
