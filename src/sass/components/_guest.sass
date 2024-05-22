@@ -1,0 +1,124 @@
+.guest
+  margin: 20px
+  min-height: calc(100vh - 40px)
+  padding: 100px 0
+  background: url(../img/guest-bg.jpg) center / cover no-repeat
+  border-radius: 30px
+  color: #fff
+  @include flexbox
+  align-items: center
+  // overflow: hidden
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    top: -10px
+    left: -10px
+    right: -10px
+    bottom: -10px
+    border-radius: var(--radius)
+    background: linear-gradient(108deg, #50C8C3 -0.98%, #C841E1 120.03%), #FFFFFF
+    z-index: -1
+  .title
+    text-align: center
+  .container
+    overflow: hidden
+    max-width: 100%
+  &-slider
+    margin-top: 80px
+    @include flexbox
+    flex-direction: column
+    align-items: center
+    .splide__track
+      overflow: initial
+      width: 100%
+      order: -1
+    .splide__arrows
+      position: relative
+      bottom: 0
+      left: 0
+      right: 0
+      margin: 0 auto
+      width: 126px
+      height: 68px
+      background: rgba(0, 0, 0, 0.55)
+      backdrop-filter: blur(3px)
+      border-radius: 99px
+      margin-top: 30px
+    .splide__arrow
+      width: 48px
+      height: 48px
+      opacity: 1
+      background: linear-gradient(108deg, #50C8C3 -0.98%, #C841E1 120.03%), #FFFFFF
+      transition: .2s
+      overflow: hidden
+      &--prev
+        left: 10px
+      &--next
+        right: 10px
+      svg
+        stroke-width: 4px
+        stroke: #fff
+        stroke-linecap: round
+        stroke-linejoin: round
+        position: relative
+        z-index: 10
+        transition: .2s
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: #fff
+        opacity: 0
+        transition: .2s
+      &[disabled]
+        &::before
+          opacity: 1
+        svg
+          stroke: #43464E
+      &:hover
+        opacity: 1
+  &-item
+    width: 310px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: -4px
+      left: 0
+      right: 0
+      margin: 0 auto
+      width: 240px
+      height: 240px
+      border-radius: 100%
+      background: linear-gradient(91.29deg, #50C8C3 0.15%, #C841E1 100%), #FFFFFF
+      z-index: -1
+    img
+      width: 232px
+      height: 232px
+      object-fit: cover
+      object-position: center
+      border-radius: 100%
+      margin: 0px auto 16px
+    h3
+      text-align: center
+      font-size: 24px
+      font-weight: 700
+    span
+      width: 96px
+      height: 36px
+      border-radius: 12px
+      display: block
+      margin: -42px auto 6px
+      background: linear-gradient(91.29deg, #50C8C3 0.15%, #C841E1 100%), #FFFFFF
+      color: #fff
+      text-align: center
+      line-height: 36px
+      font-size: 14px
+      font-weight: 700
+      text-transform: uppercase
+      position: relative
+      z-index: 5
