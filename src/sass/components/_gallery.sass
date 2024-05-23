@@ -10,12 +10,63 @@
     margin-top: 12px
   &-slider
     margin: 50px auto 0
-    height: 550px
     max-width: 970px
     width: 100%
-  .splide__track
-    overflow: initial
-    height: 100%
+    @include flexbox
+    flex-direction: column
+    align-items: center
+    .splide__track
+      overflow: initial
+      height: 550px
+      width: 100%
+      order: -1
+    .splide__arrows
+      position: relative
+      bottom: 0
+      left: 0
+      right: 0
+      margin: 0 auto
+      width: 126px
+      height: 68px
+      background: rgba(0, 0, 0, 0.55)
+      backdrop-filter: blur(3px)
+      border-radius: 99px
+      margin-top: 30px
+    .splide__arrow
+      width: 48px
+      height: 48px
+      opacity: 1
+      background: linear-gradient(108deg, #50C8C3 -0.98%, #C841E1 120.03%), #FFFFFF
+      transition: .2s
+      overflow: hidden
+      &--prev
+        left: 10px
+      &--next
+        right: 10px
+      svg
+        stroke-width: 4px
+        stroke: #43464E
+        stroke-linecap: round
+        stroke-linejoin: round
+        position: relative
+        z-index: 10
+        transition: .2s
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: #fff
+        opacity: 1
+        transition: .2s
+      &:hover
+        opacity: 1
+        &::before
+          opacity: 0
+        svg
+          stroke: #fff
   .splide__slide
     overflow: hidden
     img

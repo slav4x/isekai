@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
   slider.mount();
 
   new Splide('.gallery-slider', {
-    arrows: false,
+    arrowPath: 'M5 19.9993L35 19.9994M35 19.9994L20.8333 34.166M35 19.9994L20.8333 5.83268',
     type: 'loop',
     pagination: false,
   }).mount();
