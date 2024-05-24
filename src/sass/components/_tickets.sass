@@ -34,9 +34,14 @@
           bottom: 1px
           border-radius: 99px
           background: linear-gradient(98.64deg, #50C8C3 7.48%, #C841E1 101.48%)
+          transition: .2s
         p
           position: relative
           z-index: 5
+        &:hover
+          background: linear-gradient(270deg, #95FFFB -1.41%, rgba(255, 255, 255, 0) 26.5%, rgba(255, 255, 255, 0) 62.26%, #E383FF 96.54%)
+          &::before
+            background: linear-gradient(270deg, #50C8C3 7.48%, #C841E1 101.48%)
       .tickets-list li::before
         background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 12.5L10 15.5L17 8.5' stroke='%23FFFFFF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z' stroke='%23FFFFFF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center / cover
     &.vip
@@ -121,6 +126,10 @@
     position: relative
     z-index: 10
     background: transparent
+    transition: .2s
+    &:hover
+      background: #333
+      color: #fff
   &-head
     @include flexbox
     align-items: center

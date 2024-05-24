@@ -44,6 +44,10 @@
       -webkit-text-fill-color: transparent
       background-clip: text
       text-fill-color: transparent
+      transition: .2s
+      &:hover
+        background-size: 500%
+        // background-position: 20%
   &-message
     padding: 20px
     @include flexbox
@@ -158,9 +162,12 @@
       line-height: 26px
       cursor: pointer
       text-align: center
+      transition: background .2s
       &.active
         color: #fff
         background: linear-gradient(90deg, #50C8C3, #C841E1)
+      &:hover
+        background: #d0dae2
     &__wrapper
       @include flexbox
       margin-bottom: 16px
