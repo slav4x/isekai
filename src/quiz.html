@@ -1,0 +1,317 @@
+{% extends 'components/_layout.html' %}
+{% set site_title = 'Квиз' %}
+
+{% block content %}
+
+<section class="hero quiz-hero">
+  <div class="container">
+    <div class="quiz-text">
+      <h1>Друзья, настало время определить лучших из лучших!</h1>
+      <h2>Номинации “ISEKAI FEST” – главная премия проекта РуАниме (DEEP) в области азиатской культуры. Это премия за вклад и развитие распространения азиатского контента в областях: </h2>
+      <ul>
+        <li>Контент (аниме, дунхуа, дорамы)</li>
+        <li>Локализация (актерам дубляжа)</li>
+        <li>Блогинг (блогерам, стримерам и инфлюенсерам)</li>
+        <li>Косплей (косплеерам)</li>
+        <li>Фанатские переводы (проекты, дабберы – выпускающие фанатскую озвучку не для коммерческого пользования)</li>
+        <li>СМИ, журналистика (журналисты, проекты – рассказывающие о новостях об Азии)</li>
+      </ul>
+    </div>
+    <form action="https://isekaiwp.dev-slava.ru/wp-admin/admin-post.php" method="post" class="quiz">
+      <div class="quiz-counter">
+        <span class="current-step">1</span>/<span class="total-steps"></span>
+      </div>
+      <div class="quiz-step active">
+        <h3>Тайтл года в озвучке DEEP</h3>
+        <div class="quiz-options">
+          <label class="quiz-label">
+            <input type="radio" name="quiz_1" value="Атака Титанов" />
+            <p>Атака Титанов</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_1" value="Боевой Континент" />
+            <p>Боевой Континент</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_1" value="Слабейший монстр" />
+            <p>Слабейший монстр</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_1" value="Трон, отмеченный Богом" />
+            <p>Трон, отмеченный Богом</p>
+          </label>
+          <label class="quiz-input">
+            <input type="radio" name="quiz_1" value="Свой вариант" />
+            <input type="text" name="quiz_1_input" placeholder="Свой вариант" />
+          </label>
+        </div>
+        <button type="button" class="quiz-next" disabled>Проголосовать</button>
+      </div>
+      <div class="quiz-step">
+        <h3>Фанатский проект года</h3>
+        <div class="quiz-options">
+          <label class="quiz-label">
+            <input type="radio" name="quiz_2" value="AniLibria" />
+            <p>AniLibria</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_2" value="Flarrow Films" />
+            <p>Flarrow Films</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_2" value="SOFTBOX" />
+            <p>SOFTBOX</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_2" value="MangaLib" />
+            <p>MangaLib</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_2" value="AniStar" />
+            <p>AniStar</p>
+          </label>
+          <label class="quiz-input">
+            <input type="radio" name="quiz_2" value="Свой вариант" />
+            <input type="text" name="quiz_2_input" placeholder="Свой вариант" />
+          </label>
+        </div>
+        <button type="button" class="quiz-next" disabled>Проголосовать</button>
+      </div>
+      <div class="quiz-step">
+        <h3>Актер дубляжа года</h3>
+        <div class="quiz-options">
+          <label class="quiz-label">
+            <input type="radio" name="quiz_3" value="Ислам Ганджаев" />
+            <p>Ислам Ганджаев</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_3" value="Иван Чабан" />
+            <p>Иван Чабан</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_3" value="Владислав Токарев" />
+            <p>Владислав Токарев</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_3" value="Анна Мосолова" />
+            <p>Анна Мосолова</p>
+          </label>
+          <label class="quiz-input">
+            <input type="radio" name="quiz_3" value="Свой вариант" />
+            <input type="text" name="quiz_3_input" placeholder="Свой вариант" />
+          </label>
+        </div>
+        <button type="button" class="quiz-next" disabled>Проголосовать</button>
+      </div>
+      <div class="quiz-step">
+        <h3>Прорыв года (проект/блогер)</h3>
+        <div class="quiz-options">
+          <label class="quiz-label">
+            <input type="radio" name="quiz_4" value="Flarrow Films" />
+            <p>Flarrow Films</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_4" value="Виктор Гутман" />
+            <p>Виктор Гутман</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_4" value="АниЗоро" />
+            <p>АниЗоро</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_4" value="GraysonFin" />
+            <p>GraysonFin</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_4" value="MANGER" />
+            <p>MANGER</p>
+          </label>
+          <label class="quiz-input">
+            <input type="radio" name="quiz_4" value="Свой вариант" />
+            <input type="text" name="quiz_4_input" placeholder="Свой вариант" />
+          </label>
+        </div>
+        <button type="button" class="quiz-next" disabled>Проголосовать</button>
+      </div>
+      <div class="quiz-step">
+        <h3>Сообщество года (аниме/дунхуа)</h3>
+        <div class="quiz-options">
+          <label class="quiz-label">
+            <input type="radio" name="quiz_5" value="Александрия" />
+            <p>Александрия</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_5" value="Шикимори" />
+            <p>Шикимори</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_5" value="Немного о дунхуа" />
+            <p>Немного о дунхуа</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_5" value="Официальное аниме в России" />
+            <p>Официальное аниме в России</p>
+          </label>
+          <label class="quiz-input">
+            <input type="radio" name="quiz_5" value="Свой вариант" />
+            <input type="text" name="quiz_5_input" placeholder="Свой вариант" />
+          </label>
+        </div>
+        <button type="button" class="quiz-next" disabled>Проголосовать</button>
+      </div>
+      <div class="quiz-step">
+        <h3>Сообщество года (дорамы)</h3>
+        <div class="quiz-options">
+          <label class="quiz-label">
+            <input type="radio" name="quiz_6" value="Дорамы клуб" />
+            <p>"Дорамы клуб"</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_6" value="Dorams_New" />
+            <p>"Dorams_New"</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_6" value="ДОРАМЫ" />
+            <p>"๑۩۩ ДОРАМЫ ๑۩۩"</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_6" value="SOFTBOX" />
+            <p>"SOFTBOX"</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_6" value="notes from alaso" />
+            <p>notes from alaso's diary⁹⁵ | xu kai/сюй кай/许凯</p>
+          </label>
+          <label class="quiz-input">
+            <input type="radio" name="quiz_6" value="Свой вариант" />
+            <input type="text" name="quiz_6_input" placeholder="Свой вариант" />
+          </label>
+        </div>
+        <button type="button" class="quiz-next" disabled>Проголосовать</button>
+      </div>
+      <div class="quiz-step">
+        <h3>Автор года</h3>
+        <div class="quiz-options">
+          <label class="quiz-label">
+            <input type="radio" name="quiz_7" value="Sharon" />
+            <p>Sharon</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_7" value="Uldan Dub" />
+            <p>Uldan Dub</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_7" value="Lupin" />
+            <p>Lupin</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_7" value="Вероника Нефедова" />
+            <p>Вероника Нефедова</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_7" value="Ислам Ганджаев" />
+            <p>Ислам Ганджаев</p>
+          </label>
+          <label class="quiz-input">
+            <input type="radio" name="quiz_7" value="Свой вариант" />
+            <input type="text" name="quiz_7_input" placeholder="Свой вариант" />
+          </label>
+        </div>
+        <button type="button" class="quiz-next" disabled>Проголосовать</button>
+      </div>
+      <div class="quiz-step">
+        <h3>Лайфстайл года</h3>
+        <div class="quiz-options">
+          <label class="quiz-label">
+            <input type="radio" name="quiz_8" value="MaoDanon" />
+            <p>MaoDanon</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_8" value="Виктор Гутман" />
+            <p>Виктор Гутман</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_8" value="Вероника Нефедова" />
+            <p>Вероника Нефедова</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_8" value="Утка Шизик" />
+            <p>Утка Шизик</p>
+          </label>
+          <label class="quiz-input">
+            <input type="radio" name="quiz_8" value="Свой вариант" />
+            <input type="text" name="quiz_8_input" placeholder="Свой вариант" />
+          </label>
+        </div>
+        <button type="button" class="quiz-next" disabled>Проголосовать</button>
+      </div>
+      <div class="quiz-step">
+        <h3>Косплеер года</h3>
+        <div class="quiz-options">
+          <label class="quiz-label">
+            <input type="radio" name="quiz_9" value="GraysonFin" />
+            <p>GraysonFin</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_9" value="Loli Samurai" />
+            <p>Loli Samurai</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_9" value="SteinHolic" />
+            <p>SteinHolic</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_9" value="KawaiiFox" />
+            <p>KawaiiFox</p>
+          </label>
+          <label class="quiz-input">
+            <input type="radio" name="quiz_9" value="Свой вариант" />
+            <input type="text" name="quiz_9_input" placeholder="Свой вариант" />
+          </label>
+        </div>
+        <button type="button" class="quiz-next" disabled>Проголосовать</button>
+      </div>
+      <div class="quiz-step">
+        <h3>Восходящий актер дубляжа</h3>
+        <div class="quiz-options">
+          <label class="quiz-label">
+            <input type="radio" name="quiz_10" value="Данил Зимин" />
+            <p>Данил Зимин</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_10" value="Даниил Бледный" />
+            <p>Даниил Бледный</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_10" value="Вероника Нефедова" />
+            <p>Вероника Нефедова</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_10" value="Федор Редькин" />
+            <p>Федор Редькин</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_10" value="Михаил Филиппов" />
+            <p>Михаил Филиппов</p>
+          </label>
+          <label class="quiz-label">
+            <input type="radio" name="quiz_10" value="Денис Игнатов" />
+            <p>Денис Игнатов</p>
+          </label>
+          <label class="quiz-input">
+            <input type="radio" name="quiz_10" value="Свой вариант" />
+            <input type="text" name="quiz_10_input" placeholder="Свой вариант" />
+          </label>
+        </div>
+        <button type="submit" class="quiz-next" disabled>Проголосовать</button>
+      </div>
+      <div class="quiz-step final">
+        <h3>Спасибо, что прошли опрос!</h3>
+        <img src="https://isekaiwp.dev-slava.ru/wp-content/themes/isekai/img/animal.png" alt="">
+        <button type="button" class="quiz-next" disabled hidden>Проголосовать</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

@@ -148,4 +148,66 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
+
+  const quiz = document.querySelector('.quiz');
+  if (quiz) {
+    const steps = quiz.querySelectorAll('.quiz-step');
+    const nextButtons = quiz.querySelectorAll('.quiz-next');
+    const currentStepDisplay = document.querySelector('.current-step');
+    const totalStepsDisplay = document.querySelector('.total-steps');
+    const counter = document.querySelector('.quiz-counter');
+    let currentStep = 0;
+
+    function nextStep() {
+      currentStep++;
+      if (currentStep < steps.length) {
+        steps[currentStep - 1].classList.remove('active');
+        steps[currentStep].classList.add('active');
+        nextButtons[currentStep].disabled = true;
+        currentStepDisplay.textContent = currentStep + 1;
+      }
+      if (currentStep === steps.length - 1) {
+        counter.style.display = 'none';
+      }
+    }
+
+    nextButtons.forEach((button, index) => {
+      const radios = steps[index].querySelectorAll('input[type="radio"]');
+      radios.forEach((radio) => {
+        radio.addEventListener('change', () => {
+          button.disabled = !Array.from(radios).some((r) => r.checked);
+        });
+      });
+
+      document.querySelectorAll('.quiz-input').forEach((input) => {
+        const radio = input.querySelector('input[type="radio"]');
+        input.querySelector('input[type="text"]').addEventListener('click', () => {
+          radio.checked = true;
+          button.disabled = false;
+        });
+      });
+
+      button.addEventListener('click', () => {
+        nextStep();
+      });
+    });
+
+    totalStepsDisplay.textContent = steps.length - 1;
+
+    const form = document.querySelector('.quiz');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const formData = new FormData(form);
+      const action = form.getAttribute('action');
+
+      fetch(action, {
+        method: 'POST',
+        body: formData,
+      })
+        .then((response) => response.json())
+        .catch((error) => {
+          console.error('Произошла ошибка:', error);
+        });
+    });
+  }
 });
