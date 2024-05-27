@@ -1,0 +1,187 @@
+.main
+  width: 100%
+  min-height: 100vh
+  height: 100vh
+  background: url(../img/bg.jpg) no-repeat center / cover
+  padding: 100px 0
+  overflow: hidden
+  color: #fff
+  .container
+    min-height: 100%
+    @include flexbox
+    flex-direction: column
+    align-items: flex-start
+    max-width: 1600px
+    padding: 0 30px
+  &-age
+    font-size: 18px
+    line-height: 1
+    font-weight: 700
+    border: 3px solid #fff
+    border-radius: 999px
+    padding: 7px
+    margin-bottom: 90px
+  &-date
+    font-size: 64px
+    line-height: 1
+    font-weight: 700
+    background: -webkit-linear-gradient(0deg, #50C8C3, #C841E1)
+    -webkit-background-clip: text
+    -webkit-text-stroke: 8px transparent
+    padding: 10px 5px
+    margin: -10px -5px 30px
+  &-logo
+    margin-left: -12px
+    height: 164px
+    margin-bottom: 20px
+    &.mob
+      display: none
+  &-place
+    font-size: 54px
+    line-height: 1
+    font-weight: 700
+    background: -webkit-linear-gradient(0deg, #50C8C3, #C841E1)
+    -webkit-background-clip: text
+    -webkit-text-stroke: 8px transparent
+    padding: 10px 5px
+    margin: -10px -5px 60px
+  &-btn
+    @include flexbox
+    align-items: center
+    justify-content: center
+    border-radius: 12px
+    background: linear-gradient(90deg, #50C8C3, #C841E1)
+    width: 440px
+    height: 90px
+    font-size: 30px
+    line-height: 1
+    font-weight: 700
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 4px
+      left: 4px
+      right: 4px
+      bottom: 4px
+      background: #fff
+      border-radius: 8px
+    p
+      position: relative
+      z-index: 5
+      background: -webkit-linear-gradient(0deg, #50C8C3, #C841E1)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+  &-info
+    margin-top: auto
+    font-size: 16px
+    line-height: 1
+    display: block
+  &-girl
+    position: absolute
+    top: 0
+    bottom: -100px
+    max-width: initial
+    width: 1200px
+    height: calc(100vh - 100px)
+    left: 820px
+    z-index: -1
+    object-fit: contain
+    object-position: top left
+
+@media(max-width: 1920px)
+  .main
+    &-girl
+      width: auto
+      height: auto
+      bottom: initial
+
+@media(max-width: 1680px)
+  .main .container
+    max-width: 1200px
+
+  .main
+    padding: 50px 0
+    &-date
+      margin-bottom: 20px
+      font-size: 54px
+    &-logo
+      height: 140px
+    &-place
+      font-size: 48px
+      margin-bottom: 50px
+    &-btn
+      height: 80px
+      font-size: 24px
+    &-girl
+      width: 1200px
+      left: 720px
+      height: calc(100vh - 50px)
+
+@media(max-width: 1200px)
+  .main .container
+    max-width: 1024px
+
+  .main
+    padding: 30px 0
+    background-position: top left -250px
+    &-date
+      text-align: center
+      width: 100%
+    &-logo
+      height: 330px
+      margin: 0 auto 10px
+      &.pc
+        display: none
+      &.mob
+        display: block
+    &-place
+      text-align: center
+      width: 100%
+      margin-bottom: 40px
+    &-btn
+      margin: 0 auto
+    &-info
+      padding-top: 60px
+    &-girl
+      top: initial
+      left: initial
+      right: -230px
+      bottom: -260px
+      width: 670px
+      height: auto
+
+@media(max-width: 1023px)
+  .main .container
+    max-width: 768px
+
+@media(max-width: 767px)
+  .main .container
+    max-width: 100%
+
+  .main
+    &-date
+      font-size: 36px
+      margin-bottom: 0
+    &-logo
+      height: 210px
+      margin-bottom: 0
+    &-place
+      font-size: 28px
+      margin-bottom: 20px
+    &-btn
+      width: 100%
+      max-width: 440px
+      height: 70px
+      font-size: 18px
+    &-girl
+      display: none
+    &-info
+      padding-top: 30px
+
+@media(max-width: 400px)
+  .main
+    &-age
+      margin-bottom: 50px
+    &-logo
+      height: auto
